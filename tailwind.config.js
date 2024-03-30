@@ -38,9 +38,13 @@ module.exports = {
         gray: {
           DEFAULT: '#232323',
           100: '#606060',
+          200: '#263238',
         },
         blue: {
-          DEFAULT: "#3D5FDD"
+          DEFAULT: "#3D5FDD",
+          100: '#90A4AE',
+          200: '#E7F1F2',
+          300: '#00D5F8'
         },
         red: {
           DEFAULT: '#D0021B'

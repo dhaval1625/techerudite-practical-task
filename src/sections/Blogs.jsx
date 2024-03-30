@@ -9,11 +9,13 @@ import { useEffect, useState } from 'react';
 
 function Blogs() {
    const [blogList, setBlogList] = useState([]);
+
+   const getBlogdata = async () => {
+      const data = await fetchData(BLOG_URL);
+      setBlogList(data.data.slice(0, 3));
+   };
+
    useEffect(() => {
-      const getBlogdata = async () => {
-         const data = await fetchData(BLOG_URL);
-         setBlogList(data.data.slice(0, 3));
-      };
       getBlogdata();
    }, []);
 

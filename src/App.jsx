@@ -7,6 +7,7 @@ import { BlogBG } from './components/ui/icon';
 import Testimonals from './sections/Testimonals';
 import Blogs from './sections/Blogs';
 import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 function App() {
    return (
@@ -25,6 +26,7 @@ function App() {
             </div>
          </div>
          <Contact />
+         <Footer />
       </main>
    );
 }

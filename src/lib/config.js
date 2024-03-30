@@ -1,6 +1,9 @@
 import { z } from 'zod';
 
-export const BLOG_URL = 'http://3.7.81.243:3253/api/blog/';
+const API_URL = 'http://3.7.81.243:3253/';
+export const BLOG_URL = API_URL + 'api/blog/';
+export const CONTACT_URL = API_URL + 'api/contact/send';
+export const FOOTER_URL = API_URL + 'api/settings/fetch-frontend-details';
 
 export const dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
 
@@ -8,48 +11,39 @@ export const dateFormat = { year: 'numeric', month: 'long', day: 'numeric' };
 export const formElements = [
    {
       id: 'f1',
-      name: 'projectTitle',
-      validationSchema: z.string().min(1, {message: 'Project Title is required'}),
-      label: 'Project Title',
+      name: 'fname',
+      validationSchema: z.string().min(1, {message: 'Name is required'}),
+      label: 'Name',
    },
    {
       id: 'f2',
-      name: 'url',
-      validationSchema: z.string().url({message: 'Please enter a valid url!'}),
-      label: 'URL',
+      name: 'lname',
+      validationSchema: z.string().min(1, {message: 'Last Name is required'}),
+      label: 'Last Name',
    },
    {
       id: 'f3',
-      name: 'figma',
-      validationSchema: z.string(),
-      label: 'Figma Link',
+      name: 'email',
+      validationSchema: z.string().min(1, {message: 'Email is required!'}).email('Please enter a valid email'),
+      label: 'Mail',
    },
    {
       id: 'f4',
-      name: 'github',
-      validationSchema: z.string(),
-      label: 'Github repo',
+      name: 'phone',
+      validationSchema: z.string().min(10, {message: 'Phone number is invalid!'}),
+      label: 'Phone',
    },
    {
       id: 'f5',
-      name: 'additional1',
-      validationSchema: z.string(),
-      label: 'Additional Link 1',
-      placeholder: 'Name - Value'
+      name: 'budget',
+      validationSchema: z.number({coerce: true, invalid_type_error: 'Budget must be number!'},).min(1, {message: 'Budget is required!'}),
+      label: 'Budget',
    },
    {
       id: 'f6',
-      name: 'additional2',
-      validationSchema: z.string(),
-      label: 'Additional Link 2',
-      placeholder: 'Name - Value'
-   },
-   {
-      id: 'f7',
-      name: 'additional3',
-      validationSchema: z.string(),
-      label: 'Additional Link 3',
-      placeholder: 'Name - Value'
+      name: 'description',
+      validationSchema: z.string().min(10, {message: 'Description should be alteast 10 character long'}),
+      label: 'Description',
    },
 ]
 
