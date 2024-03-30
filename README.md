@@ -1,5 +1,7 @@
 # Techerudite Practical Task
 
+## Points to consider
+
 - I could have made navbar sticky, so that it is visible in whole page. But for sake of simplicity and to do things faster, I avoided that.
 - I have used tailwind css for styling and shadcn for build in components.
 - I have tried my best to match css styles with provided figma design. But I spared most of time in code quality and logic. So I hope you can neglect some minor mismatch in design.
