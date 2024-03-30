@@ -20,7 +20,6 @@ export async function fetchData(url, config) {
    try {
       const res = await fetch(url, fetchConfig);
       const data = await res.json();
-      console.log('api data', data);
       return data;
    } catch (error) {
       console.log(error);

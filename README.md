@@ -1,8 +1,7 @@
-# React + Vite
+# Techerudite Practical Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- I could have made navbar sticky, so that it is visible in whole page. But for sake of simplicity and to do things faster, I avoided that.
+- I have used tailwind css for styling and shadcn for build in components.
+- I have tried my best to match css styles with provided figma design. But I spared most of time in code quality and logic. So I hope you can neglect some minor mismatch in design.
+- I noticed that there is select element in budget input field of contact form. But for sake of simplicity I kept input element.
+- I have not done error handling when handling api requests for now. But I know how to do that.
