@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img, .icon {
+   @apply flex overflow-hidden;
+}
+
+.img img, .icon svg {
+   @apply w-full max-w-full;
+}
+
+.section {
+   @apply py-24 overflow-hidden;
+}
+
+html {
+   scroll-behavior: smooth
+}
+
+body {
+   @apply text-gray;
+}
+
+.bg-img, .section {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.heading {
+   text-shadow: 0px 4px 4px #00000040;
+}
+
+.about-grid {
+   grid-template-columns: 4fr 6fr;
+}
