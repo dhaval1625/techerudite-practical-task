@@ -1,5 +1,11 @@
 # Techerudite Practical Task
 
+## Steps for starting
+
+Run following commands - 
+1. npm install
+2. npm run dev
+
 ## Points to consider
 
 - I could have made navbar sticky, so that it is visible in whole page. But for sake of simplicity and to do things faster, I avoided that.
